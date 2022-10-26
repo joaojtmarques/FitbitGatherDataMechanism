@@ -11,7 +11,7 @@ import { inbox } from "file-transfer";
 function sendDataToServer(jsonData) {
   console.log("sending data to server: "+ JSON.stringify(jsonData))
   
-  fetch('https://sensedataserver.hopto.org/', { //change this line with link
+  fetch('https://fitbitgatherdata.ddns.net/', { //change this line with link
     method: 'post',
     body: JSON.stringify(jsonData)
   })//.then(res => res.json())
