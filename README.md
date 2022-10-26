@@ -17,7 +17,7 @@ Communication with a device on the internet is only possible if the endpoint is 
 The Server of this mechanism is a HTTPS Server. The following was done to setup the server.
 
 1. The Server runs in an Amazon EC2 t2.micro instance, the Ubuntu 20.04 LTS free
-tier eligible Amazon makes available. Naturally, so that this mechanism works, port 443 (standard port for HTTPS traffic) must be opened to traffic from external sources. Also allow SSH and HTTPS traffic.
+tier eligible Amazon makes available. Naturally, so that this mechanism works, port 443 (standard port for HTTPS traffic) must be opened to traffic from external sources. Also allow SSH and HTTP traffic.
 ![allowSSHandHTTPSandHTTP](images/allowSSHandHTTPSandHTTP.png)
 After creating the Amazon EC2 t2.micro instance, you can check its Public IP under the details tab.
 ![publicIp](images/EC2_PublicIP.png)
@@ -43,7 +43,7 @@ sudo certbot certonly --standalone
 ```
 Make sure to provide the hostname created in 4 when you are asked. In my case, it this demo's case, it was fitbitgatherdata.ddns.net.
 
-6. Lastly, you just need to copy the generated files to the current folder, and rename them to the files accordingly with the code. Therefore, run the following commands:
+6. Lastly, you just need to copy the generated files to the current folder, and rename them to the files accordingly with the code. Therefore, run the following commands (change the hostname):
 ```
 sudo cp /etc/letsencrypt/live/fitbitgatherdata.ddns.net/fullchain.pem cert.pem
 sudo cp /etc/letsencrypt/live/fitbitgatherdata.ddns.net/privkey.pem key.pem
@@ -71,14 +71,17 @@ The following is needed to setup the smarwatch:
 
 ## Collecting data
 
-The main clockface of the watch should look like this: ![gatherData](images/gatherData.png)
+The main clockface of the watch should look like this: 
 
-Whenever colleting data, after having the server running, one can lick the 'GATHER DATA' button. It should appear the following interface:
 ![gatherData](images/gatherData.png)
+
+Whenever colleting data, after having the server running, one can click the 'GATHER DATA' button. It should appear the following interface:
+
+![stopGatherData](images/stopGatherData.png)
 
 While the smartwach has this interface, it is streaming data towards the server. It is set up to stream data at 50Hz. You can change this value in the code. It is probably not possible to go too much higher.
 
-When streaming data, the server creates a new file with the current time in milliseconds. If you want, you can rename a new file to whatever name you want, for instance a dataset folder outside the server folder. For instance, you can run:
+When streaming data, the server creates a new file with the current time in milliseconds. If you want, you can rename a new file to whatever name you want, to store the file into a dataset folder outside the server folder. For instance, you can run:
 
 ```
 mv 1*.txt ../data/D12/U50_R03.txt
