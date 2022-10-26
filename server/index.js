@@ -1,4 +1,3 @@
-
 var https = require('https')
 var fs = require('fs');
 
@@ -18,34 +17,34 @@ var server = https.createServer(options, function (r, s) {
     });
     r.on('end', () => {
         const obj = JSON.parse(body)
-	console.log(body)
-	console.log(body.length)
+        console.log(body)
+        console.log(body.length)
         if (body === '"Start"') {
-          
+
           logger = fs.createWriteStream(Date.now()  + '.txt', {
             flags: 'a' // 'a' means appending (old data will be preserved)
           })
           writing_to_file = true
         }
         else if (body === '"Stop"') {
-          
+
           writing_to_file = false
         }
         else {
           if (writing_to_file == true) {
-    
+
             console.log(body + "\n");
-	    logger.write(body + "\n");
-        
-	 }
+            logger.write(body + "\n");
+
+         }
         }
-        
-        s.write('OK'); 
-        s.end(); 
+
+        s.write('OK');
+        s.end();
     });
-    
   }
-  
 })
 
-server.listen(9000, () => console.log("My server is listening on port 9000"));
+server.listen(443, () => console.log("My server is listening on port 443"));
+
+
