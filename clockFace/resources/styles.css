@@ -1,0 +1,103 @@
+.background {
+  viewport-fill: black;
+}
+
+#timeLabel {
+  font-size: 100;
+  font-family: Tungsten-Medium;
+  text-length: 8;
+  text-anchor: start;
+  x: 80;
+  y: 170;
+  fill: white;
+}
+#dateLabel { 
+    font-size: 40;
+  font-family: Tungsten-Medium;
+  text-anchor: start;
+  text-length: 9;
+  x: 80;
+  y: 215;
+  fill: white;
+}
+
+#gr_heartRate {
+  x: 10%;
+  y: 10%;
+  width: 33%;
+  height: 24;
+  fill: black;
+}
+
+#heartrateIcon {
+  x: 0;
+  y: 0;
+  width: 24;
+  height: 24;
+  fill: red;
+}
+
+#heartrateLabel {
+  font-size: 24;
+  font-family: System-Bold;
+  text-length: 3;
+  text-anchor: end;
+  x: 50%;
+  fill: white;
+}
+
+#gr_steps {
+  x: 35%;
+  y: 10%;
+  width: 33%;
+  height: 24;
+  fill: white;
+}
+
+#stepsIcon {
+  x: 0;
+  y: 0;
+  width: 24;
+  height: 24;
+  fill: red;
+}
+
+#stepsLabel {
+  font-size: 24;
+  font-family: System-Bold;
+  text-length: 8;
+  text-anchor: end;
+  x: 73%;
+  fill: white;
+}
+
+#gr_battery {
+  x: 65%;
+  y: 10%;
+  width: 33%;
+  height: 24;
+  fill: white;
+}
+
+#batteryIcon {
+  x: 0;
+  y: 0;
+  width: 24;
+  height: 24;
+  fill: white;
+}
+
+#batteryLabel {
+  font-size: 24;
+  font-family: System-Bold;
+  text-length: 5;
+  text-anchor: end;
+  x: 70%;
+  fill: white;
+}
+
+.application-fill           { fill: fb-yellow; }
+.foreground-fill            { fill: fb-white; }
+.background-fill            { fill: fb-black; }
+
+

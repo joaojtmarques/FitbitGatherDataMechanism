@@ -1,0 +1,17 @@
+<svg class="background">  
+  <text id="timeLabel"/>
+  <text id="dateLabel" />
+  <svg id="gr_heartRate" >
+    <image id="heartrateIcon" href="heart_rate.png" load="sync" />
+    <text id="heartrateLabel" />
+  </svg>
+  <svg id="gr_steps" >
+    <image id="stepsIcon" href="steps.png" load="sync" />
+    <text id="stepsLabel" />
+  </svg>
+  <svg id="gr_battery" >
+    <image id="batteryIcon" href="battery.png" load="sync" />
+    <text id="batteryLabel" />
+  </svg>
+  <use id="button-1" href="#text-button" class="text-button bottom application-fill" />
+</svg>
