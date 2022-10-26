@@ -71,14 +71,17 @@ The following is needed to setup the smarwatch:
 
 ## Collecting data
 
-The main clockface of the watch should look like this: ![gatherData](images/gatherData.png)
+The main clockface of the watch should look like this: 
 
-Whenever colleting data, after having the server running, one can lick the 'GATHER DATA' button. It should appear the following interface:
 ![gatherData](images/gatherData.png)
+
+Whenever colleting data, after having the server running, one can click the 'GATHER DATA' button. It should appear the following interface:
+
+![stopGatherData](images/stopGatherData.png)
 
 While the smartwach has this interface, it is streaming data towards the server. It is set up to stream data at 50Hz. You can change this value in the code. It is probably not possible to go too much higher.
 
-When streaming data, the server creates a new file with the current time in milliseconds. If you want, you can rename a new file to whatever name you want, for instance a dataset folder outside the server folder. For instance, you can run:
+When streaming data, the server creates a new file with the current time in milliseconds. If you want, you can rename a new file to whatever name you want, to store the file into a dataset folder outside the server folder. For instance, you can run:
 
 ```
 mv 1*.txt ../data/D12/U50_R03.txt
