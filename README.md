@@ -85,3 +85,10 @@ mv 1*.txt ../data/D12/U50_R03.txt
 ```
 
 If you are working in a Github repository in Amazon EC2 t2.micro instance, you can simply push the files and pull them in you local computer.
+
+
+## Handling Data
+
+You can plot the data using the *handleData/plotFile.ipynb*. You can also uncomment the commented lines in the code to generate .csv files.
+
+You can read these files into Pandas Dataframes, and handle data as you wish.
