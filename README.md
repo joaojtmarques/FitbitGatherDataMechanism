@@ -92,6 +92,6 @@ If you are working in a Github repository in Amazon EC2 t2.micro instance, you c
 
 ## Handling Data
 
-You can plot the data using the *handleData/plotFile.ipynb*. You can also uncomment the commented lines in the code to generate .csv files.
+You can plot the data using the  [handleData/plotFile.ipynb](https://github.com/joaojtmarques/FitbitGatherDataMechanism/blob/main/handleData/plotFile.ipynb). You can also uncomment the commented lines in the code to generate .csv files.
 
 You can read these files into Pandas Dataframes, and handle data as you wish.
